@@ -347,7 +347,7 @@ console.log(calculate(12, "/", 0)); // Must show Infinity
 	//The value of number π (Pi) is obtained with Math.PI in JavaScript.
 	//You might want to use the exponentiation operator ** to perform computations.
 
-const r = Number(prompt("Circle radius:"));
+const radius = Number(prompt("Circle radius:"));
 
  function circumference(radius) {
   return 2 * radius * Math.PI;
