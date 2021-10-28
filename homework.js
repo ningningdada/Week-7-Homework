@@ -264,4 +264,106 @@ for (let number = 1; number <= 100; number++) {
 	} 
 }
 
+//Section 5:
+
+//Improved hello
+//Complete the following program so that it asks the user for his first and last names, then show the result of the sayHello() function.
+
+const firstName = prompt("First name:");
+const lastName = prompt("Last name:");
+
+function sayHello(firstName, lastName) {
+  return `Hello, ${firstName} ${lastName}!`;
+} 
+
+console.log(sayHello(firstName, lastName));
+
+//Number squaring
+//Complete the following program so that the square1() and square2() functions work properly.
+
+function square1(x) {
+  return x * x;
+}
+const square2 = x => x * x; 
+
+console.log(square1(0)); // Must show 0
+console.log(square1(2)); // Must show 4
+console.log(square1(5)); // Must show 25
+
+console.log(square2(0)); // Must show 0
+console.log(square2(2)); // Must show 4
+console.log(square2(5)); // Must show 25
+
+for (let i = 0; i <= 10; i++) {
+  console.log(square1(i));
+}
+
+//Minimum of two numbers
+//Let's pretend the JavaScript Math.min() function doesn't exist. Complete the following program so that the min() function returns the minimum of its two received numbers.
+
+function min(a, b) {
+  if (a < b) {
+    return a;
+  } else{
+  return b;
+	}
+} 
+
+console.log(min(4.5, 5)); // Must show 4.5
+console.log(min(19, 9)); // Must show 9
+console.log(min(1, 1)); // Must show 1
+
+//Calculator
+//Complete the following program so that it offers the four basic arithmetical operations: addition, subtraction, multiplication and division. You can use either a function declaration or a function expression.
+
+function calculate(num1, operation, num2) {
+  let answer;
+  switch (operation) {
+    case "+":
+      result = num1 + num2;
+      break;
+    case "-":
+      result = num1 - num2;
+      break;
+    case "*":
+      result = num1 * num2;
+      break;
+    case "/":
+      result = num1 / num2;
+      break;
+  }
+  return answer;
+}
+
+console.log(calculate(4, "+", 6));  // Must show 10
+console.log(calculate(4, "-", 6));  // Must show -2
+console.log(calculate(2, "*", 0));  // Must show 0
+console.log(calculate(12, "/", 0)); // Must show Infinity
+
+//Circumference and area of a circle
+//Write a program containing two functions to calculate the circumference and area of a circle defined by its radius. Test it using user input.
+//Here are some tips for solving this exercise:
+	//Circumference and area calculation formulas should be part of your secondary school memories... Or a Google click away :)
+	//The value of number π (Pi) is obtained with Math.PI in JavaScript.
+	//You might want to use the exponentiation operator ** to perform computations.
+
+const r = Number(prompt("Circle radius:"));
+
+ function circumference(radius) {
+  return 2 * radius * Math.PI;
+} 
+
+
+ function area(radius) {
+  return radius ** 2 * Math.PI;
+} 
+
+console.log(`Circumference: ${circumference(radius)}`);
+console.log(`Area: ${area(radius)}`);
+
+
+
+
+
+
 
